@@ -10,6 +10,8 @@ import { ProductoComponent } from './pages/producto/producto.component';
 import { ProductoDetailComponent } from './pages/producto-detail/producto-detail.component';
 import { QuienesComponent } from './pages/quienes/quienes.component';
 import { ContactoComponent } from './pages/dialogo/contacto/contacto.component';
+import { NotfoundComponent } from './pages/notfound/notfound.component';
+import { InicioComponent } from './pages/inicio/inicio.component';
 
 @NgModule({
   declarations: [
@@ -19,7 +21,9 @@ import { ContactoComponent } from './pages/dialogo/contacto/contacto.component';
     ProductoComponent,
     ProductoDetailComponent,
     QuienesComponent,
-    ContactoComponent
+    ContactoComponent,
+    NotfoundComponent,
+    InicioComponent
   ],
   imports: [
     BrowserModule,
