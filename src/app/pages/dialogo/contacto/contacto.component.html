@@ -1,21 +1,24 @@
-<mat-dialog-content>
-  <form class="row" [formGroup]="formulario" (submit)="enviarCorreo()" >
-    <mat-form-field id="email">
-      <mat-label>Email</mat-label>
-      <input matInput formControlName="email">
-      <mat-hint>Escriba su email</mat-hint>
-      <mat-error *ngIf="formulario.get('email')?.errors?.['required']">El campo es obligatorio</mat-error>
-    </mat-form-field>
+<div id="dialogo">
+  <mat-dialog-content>
+    <form class="row" [formGroup]="formulario" (submit)="enviarCorreo()" >
+      <mat-form-field id="email">
+        <mat-label>Email</mat-label>
+        <input matInput formControlName="email">
+        <mat-hint>Escriba su email</mat-hint>
+        <mat-error *ngIf="formulario.get('email')?.errors?.['required']">El campo es obligatorio</mat-error>
+      </mat-form-field>
 
-    <mat-form-field id="cuerpo">
-      <mat-label>Cuerpo del correo</mat-label>
-      <textarea matInput cdkTextareaAutosize formControlName="cuerpo"></textarea>
-      <mat-hint>Escriba el contenido del correo</mat-hint>
-      <mat-error *ngIf="formulario.get('cuerpo')?.errors?.['required']">El campo es obligatorio</mat-error>
-    </mat-form-field>
-  </form>
-</mat-dialog-content>
-<mat-dialog-actions>
+      <mat-form-field id="cuerpo">
+        <mat-label>Cuerpo del correo</mat-label>
+        <textarea matInput cdkTextareaAutosize formControlName="cuerpo"></textarea>
+        <mat-hint>Escriba el contenido del correo</mat-hint>
+        <mat-error *ngIf="formulario.get('cuerpo')?.errors?.['required']">El campo es obligatorio</mat-error>
+      </mat-form-field>
+    </form>
+  </mat-dialog-content>
+  <mat-dialog-actions id="botones">
     <button id="enviar" mat-button (click)="enviarCorreo()">Enviar</button>
     <button id="cancelar" mat-button (click)="salirDialogo()">Cancelar</button>
-</mat-dialog-actions>
+  </mat-dialog-actions>
+</div>
+
