@@ -19,6 +19,8 @@ export class ContactoComponent {
   }
 
   enviarCorreo() {
+      console.log(this.formulario.value.email);
+      console.log(this.formulario.value.cuerpo);
       this.contactoRef.close("enviar");
   }
 
