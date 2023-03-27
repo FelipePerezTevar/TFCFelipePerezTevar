@@ -12,6 +12,10 @@ import { QuienesComponent } from './pages/quienes/quienes.component';
 import { ContactoComponent } from './pages/dialogo/contacto/contacto.component';
 import { NotfoundComponent } from './pages/notfound/notfound.component';
 import { InicioComponent } from './pages/inicio/inicio.component';
+import {MatDialogModule} from "@angular/material/dialog";
+import {MatButtonModule} from "@angular/material/button";
+import {MatInputModule} from "@angular/material/input";
+import {ReactiveFormsModule} from "@angular/forms";
 
 @NgModule({
   declarations: [
@@ -28,7 +32,11 @@ import { InicioComponent } from './pages/inicio/inicio.component';
   imports: [
     BrowserModule,
     AppRoutingModule,
-    BrowserAnimationsModule
+    BrowserAnimationsModule,
+    MatDialogModule,
+    MatButtonModule,
+    MatInputModule,
+    ReactiveFormsModule
   ],
   providers: [],
   bootstrap: [AppComponent]
