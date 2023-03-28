@@ -20,6 +20,13 @@
             "outputPath": "dist/tfcfelipe-perez-tevar",
             "index": "src/index.html",
             "main": "src/main.ts",
+            "resolve": {
+              "fallback": {
+                "stream": require.resolve("stream-browserify"),
+                "path": require.resolve("path-browserify"),
+                "crypto": require.resolve("crypto-browserify")
+              }
+            }
             "polyfills": [
               "zone.js"
             ],
@@ -102,7 +109,10 @@
               "@angular/material/prebuilt-themes/indigo-pink.css",
               "src/styles.scss"
             ],
-            "scripts": []
+            "scripts": [{
+
+            }
+            ]
           }
         }
       }
