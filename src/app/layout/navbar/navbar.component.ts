@@ -14,18 +14,7 @@ export class NavbarComponent {
 
   contactoDialogo() {
 
-    const dialogref = this.dialog.open(ContactoComponent);
-
-    dialogref.afterClosed().subscribe(
-      result => {
-
-        if(result == "enviar"){
-          //Enviamos correo
-          console.log("Holi de confirmación")
-        }
-
-      }
-    )
+    this.dialog.open(ContactoComponent);
 
   }
 }

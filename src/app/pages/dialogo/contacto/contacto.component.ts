@@ -1,6 +1,7 @@
 import { Component } from '@angular/core';
 import {MatDialogRef} from "@angular/material/dialog";
 import {FormBuilder, Validators} from "@angular/forms";
+import emailjs, {EmailJSResponseStatus} from "@emailjs/browser";
 
 @Component({
   selector: 'app-contacto',
@@ -19,9 +20,22 @@ export class ContactoComponent {
 
   }
 
-  enviarCorreo() {
-      console.log(this.formulario.value.email);
-      console.log(this.formulario.value.cuerpo);
+  enviarCorreo(e: Event) {
+
+    try{
+      e.preventDefault();
+
+      emailjs.sendForm('service_ladblgy', 'template_huusd3o', e.target as HTMLFormElement, 'kT-j18WasUFJy0xQY')
+        .then((result:EmailJSResponseStatus) => {
+          console.log(result.text);
+        }, (error) => {
+          console.log((error.text));
+        });
+
+    }catch (error) {
+      console.log(error)
+    }
+
       this.contactoRef.close("enviar");
   }
 
