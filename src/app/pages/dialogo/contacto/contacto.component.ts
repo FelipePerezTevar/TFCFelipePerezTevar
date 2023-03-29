@@ -11,6 +11,7 @@ export class ContactoComponent {
 
   formulario = this.fb.nonNullable.group({
     email: ['', Validators.required],
+    asunto: ['', Validators.required],
     cuerpo: ['', Validators.required]
   });
 

@@ -8,6 +8,13 @@
         <mat-error *ngIf="formulario.get('email')?.errors?.['required']">El campo es obligatorio</mat-error>
       </mat-form-field>
 
+      <mat-form-field id="asunto">
+        <mat-label>Asunto</mat-label>
+        <input matInput formControlName="email">
+        <mat-hint>Escriba el asunto del correo</mat-hint>
+        <mat-error *ngIf="formulario.get('asunto')?.errors?.['required']">El campo es obligatorio</mat-error>
+      </mat-form-field>
+
       <mat-form-field id="cuerpo">
         <mat-label>Cuerpo del correo</mat-label>
         <textarea matInput cdkTextareaAutosize formControlName="cuerpo"></textarea>
