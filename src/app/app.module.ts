@@ -16,6 +16,8 @@ import {MatDialogModule} from "@angular/material/dialog";
 import {MatButtonModule} from "@angular/material/button";
 import {MatInputModule} from "@angular/material/input";
 import {ReactiveFormsModule} from "@angular/forms";
+import { MailchimpMarketingModule } from '@mailchimp/mailchimp_marketing';
+
 
 @NgModule({
   declarations: [
@@ -36,7 +38,11 @@ import {ReactiveFormsModule} from "@angular/forms";
     MatDialogModule,
     MatButtonModule,
     MatInputModule,
-    ReactiveFormsModule
+    ReactiveFormsModule,
+    MailchimpMarketingModule.forRoot({
+      apiKey: '96c3151590ccc9c7cd172a7a687057b6',
+      server: 'us21'
+    })
   ],
   providers: [],
   bootstrap: [AppComponent]
