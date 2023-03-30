@@ -25,7 +25,16 @@ export class ContactoComponent {
     try{
       e.preventDefault();
 
-      emailjs.sendForm('service_ladblgy', 'template_huusd3o', e.target as HTMLFormElement, 'kT-j18WasUFJy0xQY')
+      const form = document.createElement('form');
+      form.appendChild(document.createElement('input')).name = 'email';
+      form.appendChild(document.createElement('input')).name = 'asunto';
+      form.appendChild(document.createElement('textarea')).name = "cuerpo";
+
+      form['email'].value = this.formulario.value.email!;
+      form['asunto'].value = this.formulario.value.asunto!;
+      form['cuerpo'].value = this.formulario.value.cuerpo!;
+
+      emailjs.sendForm('service_ladblgy', 'template_huusd3o', form, 'kT-j18WasUFJy0xQY')
         .then((result:EmailJSResponseStatus) => {
           console.log(result.text);
         }, (error) => {
