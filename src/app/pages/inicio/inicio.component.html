@@ -1,77 +1,57 @@
 <div>
-  <h1>Cerámicas Doli</h1>
-  <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit.
-    Nulla a purus nec nisl imperdiet pulvinar.
-    Donec lectus turpis, malesuada sed congue vel, egestas quis massa.
-    Aenean eget sollicitudin velit. Curabitur convallis nisi dolor, sit amet venenatis mauris tristique et.
-    Donec ac lacinia magna. In blandit ipsum ac cursus ultricies.
-    Nunc porta, dolor ullamcorper imperdiet interdum, arcu nunc lobortis tortor, quis pretium est diam quis nulla.
-    In gravida mi sagittis, tempor purus eu, laoreet nisl. Donec dignissim scelerisque risus sed ultricies.
-
-    Aliquam at sagittis ex. Quisque tincidunt justo et eros pretium, non hendrerit felis eleifend.
-    Praesent congue purus diam, et mattis nibh lobortis vitae. Cras gravida feugiat libero, in finibus ante bibendum at.
-    Vestibulum ante ipsum primis in faucibus orci luctus et ultrices posuere cubilia curae;
-    Duis mattis mattis arcu, ut aliquet nibh fringilla quis. Suspendisse hendrerit lorem dui, sit amet sollicitudin lectus sodales ut.
-    Nunc porta aliquam enim vel posuere. Sed pharetra elit maximus lacinia blandit. Maecenas porta vitae nulla at molestie.
-    Nullam dapibus sapien posuere metus tincidunt, eget porttitor massa laoreet. Duis egestas sem eget enim dignissim, at porttitor orci porta.
-    Aliquam ultricies arcu massa, at scelerisque metus tempus a. Nullam mollis turpis nec finibus tempor.</p>
+  <h1>Introducción</h1>
+  <p>Cerámicas Doli es una empresa de fabricación en producción de piezas de cerámicas destinadas al uso en jardineria
+    y floristeria. En está página web podrás encontrar toda la información oficial y verifica sobre nuestra empresa.</p>
 </div>
 
 <div>
   <h1>Productos</h1>
-  <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit.
-    Nulla a purus nec nisl imperdiet pulvinar.
-    Donec lectus turpis, malesuada sed congue vel, egestas quis massa.
-    Aenean eget sollicitudin velit. Curabitur convallis nisi dolor, sit amet venenatis mauris tristique et.
-    Donec ac lacinia magna. In blandit ipsum ac cursus ultricies.
-    Nunc porta, dolor ullamcorper imperdiet interdum, arcu nunc lobortis tortor, quis pretium est diam quis nulla.
-    In gravida mi sagittis, tempor purus eu, laoreet nisl. Donec dignissim scelerisque risus sed ultricies.
+  <div class="row">
+    <div class="col-6">
+      <p>En el apartado de productos, encontrarás a todos los productos que ofrecemos al público.
+        Donde se podrá filtrar por tipo, tamaño y precio para la facilidad de la obtención de un modelo en especifico.
+        Además, puedes clickar sobre el producto interesado para ver todos los detalles de la pieza.</p>
+      <button class="btn"  (click)="navegar('producto')">Ver más</button>
+    </div>
+        <div class="slider">
+        <div>
+          <img  src="../../../assets/imagenes/maceta1New.png" alt="First slide">
+        </div>
+        <div class="carousel-item">
+          <img  src="../../../assets/imagenes/maceta2New.png" alt="Second slide">
+        </div>
+        <div class="carousel-item">
+          <img  src="../../../assets/imagenes/maceta3New.png" alt="Third slide">
+        </div>
+      </div>
+    </div>
 
-    Aliquam at sagittis ex. Quisque tincidunt justo et eros pretium, non hendrerit felis eleifend.
-    Praesent congue purus diam, et mattis nibh lobortis vitae. Cras gravida feugiat libero, in finibus ante bibendum at.
-    Vestibulum ante ipsum primis in faucibus orci luctus et ultrices posuere cubilia curae;
-    Duis mattis mattis arcu, ut aliquet nibh fringilla quis. Suspendisse hendrerit lorem dui, sit amet sollicitudin lectus sodales ut.
-    Nunc porta aliquam enim vel posuere. Sed pharetra elit maximus lacinia blandit. Maecenas porta vitae nulla at molestie.
-    Nullam dapibus sapien posuere metus tincidunt, eget porttitor massa laoreet. Duis egestas sem eget enim dignissim, at porttitor orci porta.
-    Aliquam ultricies arcu massa, at scelerisque metus tempus a. Nullam mollis turpis nec finibus tempor.</p>
-  <button class="btn"  (click)="navegar('producto')">Ver más</button>
 </div>
 
 <div>
   <h1>Quienes somos</h1>
-  <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit.
-    Nulla a purus nec nisl imperdiet pulvinar.
-    Donec lectus turpis, malesuada sed congue vel, egestas quis massa.
-    Aenean eget sollicitudin velit. Curabitur convallis nisi dolor, sit amet venenatis mauris tristique et.
-    Donec ac lacinia magna. In blandit ipsum ac cursus ultricies.
-    Nunc porta, dolor ullamcorper imperdiet interdum, arcu nunc lobortis tortor, quis pretium est diam quis nulla.
-    In gravida mi sagittis, tempor purus eu, laoreet nisl. Donec dignissim scelerisque risus sed ultricies.
-
-    Aliquam at sagittis ex. Quisque tincidunt justo et eros pretium, non hendrerit felis eleifend.
-    Praesent congue purus diam, et mattis nibh lobortis vitae. Cras gravida feugiat libero, in finibus ante bibendum at.
-    Vestibulum ante ipsum primis in faucibus orci luctus et ultrices posuere cubilia curae;
-    Duis mattis mattis arcu, ut aliquet nibh fringilla quis. Suspendisse hendrerit lorem dui, sit amet sollicitudin lectus sodales ut.
-    Nunc porta aliquam enim vel posuere. Sed pharetra elit maximus lacinia blandit. Maecenas porta vitae nulla at molestie.
-    Nullam dapibus sapien posuere metus tincidunt, eget porttitor massa laoreet. Duis egestas sem eget enim dignissim, at porttitor orci porta.
-    Aliquam ultricies arcu massa, at scelerisque metus tempus a. Nullam mollis turpis nec finibus tempor.</p>
-  <button class="btn" (click)="navegar('quienes')">Ver más</button>
+  <div class="row">
+    <div class="col-6">
+      <p>En quienes somos, mostramos la información de interés social de la empresa, especificamente explicamos parte de nuestro origen,
+        como llegar y mucho más.</p>
+      <button class="btn" (click)="navegar('quienes')">Ver más</button>
+    </div>
+    <div class="slider">
+      <div>
+        <img  src="../../../assets/imagenes/maceta1New.png" alt="First slide">
+      </div>
+      <div class="carousel-item">
+        <img  src="../../../assets/imagenes/maceta2New.png" alt="Second slide">
+      </div>
+      <div class="carousel-item">
+        <img  src="../../../assets/imagenes/maceta3New.png" alt="Third slide">
+      </div>
+    </div>
+  </div>
 </div>
 
 <div>
   <h1>Contacta con nosotros</h1>
-  <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit.
-    Nulla a purus nec nisl imperdiet pulvinar.
-    Donec lectus turpis, malesuada sed congue vel, egestas quis massa.
-    Aenean eget sollicitudin velit. Curabitur convallis nisi dolor, sit amet venenatis mauris tristique et.
-    Donec ac lacinia magna. In blandit ipsum ac cursus ultricies.
-    Nunc porta, dolor ullamcorper imperdiet interdum, arcu nunc lobortis tortor, quis pretium est diam quis nulla.
-    In gravida mi sagittis, tempor purus eu, laoreet nisl. Donec dignissim scelerisque risus sed ultricies.
-
-    Aliquam at sagittis ex. Quisque tincidunt justo et eros pretium, non hendrerit felis eleifend.
-    Praesent congue purus diam, et mattis nibh lobortis vitae. Cras gravida feugiat libero, in finibus ante bibendum at.
-    Vestibulum ante ipsum primis in faucibus orci luctus et ultrices posuere cubilia curae;
-    Duis mattis mattis arcu, ut aliquet nibh fringilla quis. Suspendisse hendrerit lorem dui, sit amet sollicitudin lectus sodales ut.
-    Nunc porta aliquam enim vel posuere. Sed pharetra elit maximus lacinia blandit. Maecenas porta vitae nulla at molestie.
-    Nullam dapibus sapien posuere metus tincidunt, eget porttitor massa laoreet. Duis egestas sem eget enim dignissim, at porttitor orci porta.
-    Aliquam ultricies arcu massa, at scelerisque metus tempus a. Nullam mollis turpis nec finibus tempor.</p>
+  <p>Para poder contactar con nosotros, puedes utilizar los iconos que se encuentran en la parte de abajo y utilizar la
+    red social que prefiera, también puedes ir al apartado de Contacto del menú para escribirnos un correo directamente</p>
 </div>

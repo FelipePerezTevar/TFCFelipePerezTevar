@@ -14,6 +14,18 @@ button:hover{
   color: #000020;
 }
 
+.slick-slide img {
+  width: 100%;
+}
+
+.slick-prev:before,
+.slick-next:before {
+  color: black;
+}
+
+.slick-dots li button:before {
+  color: black;
+}
 
 
 

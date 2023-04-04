@@ -1,4 +1,4 @@
-import { Component } from '@angular/core';
+import {AfterViewInit, Component, OnInit} from '@angular/core';
 import {Router} from "@angular/router";
 
 @Component({
@@ -6,12 +6,20 @@ import {Router} from "@angular/router";
   templateUrl: './inicio.component.html',
   styleUrls: ['./inicio.component.scss']
 })
-export class InicioComponent {
+export class InicioComponent implements OnInit, AfterViewInit{
 
   constructor(private router: Router) {
   }
 
   navegar(contacto: string) {
       this.router.navigate([contacto]);
+  }
+
+  ngAfterViewInit(): void {
+
+
+  }
+
+  ngOnInit(): void {
   }
 }
