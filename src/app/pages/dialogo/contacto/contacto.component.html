@@ -17,7 +17,7 @@
 
       <mat-form-field id="cuerpo">
         <mat-label>Cuerpo del correo</mat-label>
-        <input matInput formControlName="cuerpo" name="cuerpo"/>
+        <textarea id="cuerpoTX" matInput formControlName="cuerpo" name="cuerpo"></textarea>
         <mat-hint>Escriba el contenido del correo</mat-hint>
         <mat-error *ngIf="formulario.get('cuerpo')?.errors?.['required']">El campo es obligatorio</mat-error>
       </mat-form-field>
