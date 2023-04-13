@@ -1,1 +1,10 @@
-<p>producto works!</p>
+<div>
+  <h1>Productos</h1>
+  <div>
+    <p>Filtros mamalones en construcción</p>
+  </div>
+  <div class="row">
+    <app-producto-card id="card" *ngFor="let producto of productocolor" [productocolor]="producto" class="col-6"
+    (clickDetalle)="navegarADetalle($event)"></app-producto-card>
+  </div>
+</div>

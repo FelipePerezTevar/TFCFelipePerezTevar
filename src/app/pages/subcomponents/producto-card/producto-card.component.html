@@ -1,0 +1,11 @@
+<div class="card" *ngIf="productocolor">
+  <div class="row">
+    <div class="col-md-8">
+      <div class="card-body">
+        <img [src]="productocolor.imagen.url"/>
+        <h4 class="card-title">{{productocolor.producto.tipo.descripcion}} {{productocolor.producto.modelo.nombre}}</h4>
+        <a class="btn" (click)="irADetalle()">Ver detalles</a>
+      </div>
+    </div>
+  </div>
+</div>

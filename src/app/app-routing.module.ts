@@ -6,6 +6,7 @@ import {QuienesComponent} from "./pages/quienes/quienes.component";
 import {NotfoundComponent} from "./pages/notfound/notfound.component";
 import {ContactoComponent} from "./pages/dialogo/contacto/contacto.component";
 import {InicioComponent} from "./pages/inicio/inicio.component";
+import {ProductoDetailComponent} from "./pages/producto-detail/producto-detail.component";
 
 const routes: Routes = [
 
@@ -24,6 +25,10 @@ const routes: Routes = [
   {
     path: 'quienes',
     component: QuienesComponent
+  },
+  {
+    path: 'detalle',
+    component: ProductoDetailComponent
   },
   {
     path: '',
