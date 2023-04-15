@@ -15,10 +15,12 @@ import { InicioComponent } from './pages/inicio/inicio.component';
 import {MatDialogModule} from "@angular/material/dialog";
 import {MatButtonModule} from "@angular/material/button";
 import {MatInputModule} from "@angular/material/input";
-import {ReactiveFormsModule} from "@angular/forms";
+import {FormsModule, ReactiveFormsModule} from "@angular/forms";
 import {CarouselModule} from "ngx-owl-carousel-o";
 import { ProductoCardComponent } from './pages/subcomponents/producto-card/producto-card.component';
 import {HttpClientModule} from "@angular/common/http";
+import {MatSelectModule} from "@angular/material/select";
+
 
 @NgModule({
   declarations: [
@@ -33,17 +35,19 @@ import {HttpClientModule} from "@angular/common/http";
     InicioComponent,
     ProductoCardComponent
   ],
-  imports: [
-    BrowserModule,
-    AppRoutingModule,
-    BrowserAnimationsModule,
-    MatDialogModule,
-    MatButtonModule,
-    MatInputModule,
-    ReactiveFormsModule,
-    CarouselModule,
-    HttpClientModule
-  ],
+    imports: [
+        BrowserModule,
+        AppRoutingModule,
+        BrowserAnimationsModule,
+        MatDialogModule,
+        MatButtonModule,
+        MatInputModule,
+        ReactiveFormsModule,
+        CarouselModule,
+        HttpClientModule,
+        FormsModule,
+        MatSelectModule
+    ],
   providers: [],
   bootstrap: [AppComponent]
 })

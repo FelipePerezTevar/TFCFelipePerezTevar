@@ -1,6 +1,5 @@
 import {Component, OnInit} from '@angular/core';
 import {ProductoService} from "../../services/producto.service";
-import {ProductoComponent} from "../producto/producto.component";
 import {Color, Imagen, Medida, Producto, ProductoResponse} from "../../models/ProductoResponse";
 
 @Component({
@@ -18,11 +17,16 @@ export class ProductoDetailComponent implements OnInit{
 
   tipo: String | undefined;
 
+  Imedida: number = 0;
+
+  Icolor: number = 0;
+
   precio: number[] = [];
   colores: Color[] = [];
   imagenes: String[] = [];
 
   medidas: Medida[] = [];
+
 
   constructor(private productoService: ProductoService) {
   }
@@ -33,7 +37,6 @@ export class ProductoDetailComponent implements OnInit{
   }
 
   private getProducto(){
-    this.productoService.productoId = 1;
     this.productoService.getProductosDetalle().subscribe({
       next: value => {
         this.productoResponse = value;

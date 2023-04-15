@@ -1,19 +1,30 @@
 <div class="row" *ngIf="productoResponse">
   <div class="col-6">
-   <img [src]="imagenes[0]"/>
+   <img [src]="imagenes[Icolor]"/>
   </div>
   <div class="col-6">
-    <div class="row">
-      <p>{{referencia}}</p>
-      <p>{{tipo}}</p>
-      <p>{{modelo}}</p>
-      <p>{{precio[0]}}</p>
+    <div>
+      <h1>Detalles</h1>
+      <div class="row">
+        <p>Referencia: {{referencia}}</p>
+        <p>Tipo: {{tipo}}</p>
+        <p>Modelo: {{modelo}}</p>
+        <p>Precio: {{precio[Imedida]}}€</p>
+      </div>
     </div>
-    <div class="row" *ngFor="let medida of medidas">
-      <p>{{medida.alto}} X {{medida.ancho}}  º{{medida.diametro}}</p>
+    <hr>
+    <h2>Medidas</h2>
+    <div class="form-check" *ngFor="let medida of medidas; index as i">
+      <input class="form-check-input" type="radio" name="flexRadioMedida" id="flexRadioMedida"
+      [(ngModel)]="Imedida" [value]="i" >
+      <label class="form-check-label" for="flexRadioMedida">{{medida.alto}} X {{medida.ancho}}  º{{medida.diametro}}</label>
     </div>
-    <div class="row" *ngFor="let color of colores">
-      <p>{{color.nombre}}</p>
+    <hr>
+    <h2>Colores</h2>
+    <div class="row" *ngFor="let color of colores; index as i">
+      <input class="form-check-input" type="radio" name="flexRadioColor" id="flexRadioColor"
+      [(ngModel)]="Icolor" [value]="i">
+      <label class="form-check-label" for="flexRadioColor">{{color.nombre}}</label>
     </div>
   </div>
 </div>

@@ -1,7 +1,7 @@
 import { Injectable } from '@angular/core';
 import {HttpClient} from "@angular/common/http";
 import {Observable} from "rxjs";
-import {ProductoResponse} from "../models/ProductoResponse";
+import {Modelo, ProductoResponse, Tipo} from "../models/ProductoResponse";
 
 @Injectable({
   providedIn: 'root'
@@ -30,6 +30,18 @@ export class ProductoService {
 
     const url = `http://localhost:8080/productocolor/producto/${idproducto}`
     return this.http.get<ProductoResponse>(url);
+  }
+
+  public getTipo(): Observable<Tipo[]>{
+
+    const url = 'http://localhost:8080/tipo/lista'
+    return this.http.get<Tipo[]>(url);
+
+  }
+
+  public getModelo(): Observable<Modelo[]>{
+    const url= 'http://localhost:8080/modelo/lista'
+    return this.http.get<Modelo[]>(url);
   }
 
 

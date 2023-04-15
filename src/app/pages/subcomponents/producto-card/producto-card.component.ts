@@ -11,6 +11,8 @@ export class ProductoCardComponent {
   @Input() productocolor?: Productocolor;
   @Input() medida?: number;
 
+  @Input() color?: number;
+
   @Output() clickDetalle: EventEmitter<number> = new EventEmitter<number>();
 
   irADetalle(){
