@@ -1,5 +1,5 @@
 import {Component, OnInit} from '@angular/core';
-import {Productocolor, ProductoResponse} from "../../models/ProductoResponse";
+import {Medida, Productocolor, ProductoResponse} from "../../models/ProductoResponse";
 import {ProductoService} from "../../services/producto.service";
 import {Router} from "@angular/router";
 
@@ -31,6 +31,7 @@ export class ProductoComponent implements OnInit{
       }
     })
   }
+
 
   navegarADetalle($event: number){
     this.productoService.productoId = $event;

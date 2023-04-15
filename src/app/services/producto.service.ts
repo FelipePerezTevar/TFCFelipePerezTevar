@@ -20,4 +20,17 @@ export class ProductoService {
     const url = "http://localhost:8080/productocolor/lista";
     return this.http.get<ProductoResponse>(url);
   }
+
+  public getProductosDetalle(): Observable<ProductoResponse>{
+
+    let idproducto = this._productoId;
+    if(this._productoId == 0){
+      idproducto = + sessionStorage.getItem('pelicula')!;
+    }
+
+    const url = `http://localhost:8080/productocolor/producto/${idproducto}`
+    return this.http.get<ProductoResponse>(url);
+  }
+
+
 }

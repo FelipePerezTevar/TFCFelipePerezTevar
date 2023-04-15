@@ -9,6 +9,7 @@ import {Productocolor} from "../../../models/ProductoResponse";
 export class ProductoCardComponent {
 
   @Input() productocolor?: Productocolor;
+  @Input() medida?: number;
 
   @Output() clickDetalle: EventEmitter<number> = new EventEmitter<number>();
 

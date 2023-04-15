@@ -1,1 +1,19 @@
-<p>producto-detail works!</p>
+<div class="row" *ngIf="productoResponse">
+  <div class="col-6">
+   <img [src]="imagenes[0]"/>
+  </div>
+  <div class="col-6">
+    <div class="row">
+      <p>{{referencia}}</p>
+      <p>{{tipo}}</p>
+      <p>{{modelo}}</p>
+      <p>{{precio[0]}}</p>
+    </div>
+    <div class="row" *ngFor="let medida of medidas">
+      <p>{{medida.alto}} X {{medida.ancho}}  º{{medida.diametro}}</p>
+    </div>
+    <div class="row" *ngFor="let color of colores">
+      <p>{{color.nombre}}</p>
+    </div>
+  </div>
+</div>
