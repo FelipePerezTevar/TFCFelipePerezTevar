@@ -1,4 +1,4 @@
-<div class="row" *ngIf="productoResponse">
+<div id="principal" class="row" *ngIf="productoResponse">
   <div class="col-6">
    <img [src]="imagenes[Icolor]"/>
   </div>
@@ -17,7 +17,7 @@
     <div class="form-check" *ngFor="let medida of medidas; index as i">
       <input class="form-check-input" type="radio" name="flexRadioMedida" id="flexRadioMedida"
       [(ngModel)]="Imedida" [value]="i" >
-      <label class="form-check-label" for="flexRadioMedida">{{medida.alto}} X {{medida.ancho}}  º{{medida.diametro}}</label>
+      <label class="form-check-label" for="flexRadioMedida">{{medida.alto}}cm X {{medida.ancho}}cm  º{{medida.diametro}}cm</label>
     </div>
     <hr>
     <h2>Colores</h2>

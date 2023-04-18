@@ -1,41 +1,41 @@
-<div>
+<div id="principal">
   <h1>Productos</h1>
   <div class="row">
-    <form>
+    <form [formGroup]="formulario" (submit)="anyadirFiltro()">
       <mat-form-field class="col" id="tipo">
         <mat-label>Tipo</mat-label>
-        <mat-select>
-          <mat-option *ngFor="let tipo of tipoList" [value]="tipo">{{tipo.descripcion}}</mat-option>
+        <mat-select formControlName="tipo">
+          <mat-option *ngFor="let tipo of tipoList" [value]="tipo">{{tipo}}</mat-option>
         </mat-select>
       </mat-form-field>
 
       <mat-form-field class="col" id="modelo">
         <mat-label>Modelo</mat-label>
-        <mat-select>
-          <mat-option *ngFor="let modelo of modeloList" [value]="modelo">{{modelo.nombre}}</mat-option>
+        <mat-select formControlName="modelo">
+          <mat-option *ngFor="let modelo of modeloList" [value]="modelo">{{modelo}}</mat-option>
         </mat-select>
       </mat-form-field>
 
       <mat-form-field class="col" id="altura">
         <mat-label>Altura</mat-label>
-        <input matInput placeholder="Altura" type="number"/>
+        <input matInput formControlName="alto" placeholder="Altura" type="number"/>
       </mat-form-field>
 
       <mat-form-field class="col" id="anchura">
         <mat-label>Anchura</mat-label>
-        <input matInput placeholder="Anchura" type="number"/>
+        <input matInput formControlName="ancho" placeholder="Anchura" type="number"/>
       </mat-form-field>
 
       <mat-form-field class="col" id="diametro">
         <mat-label>Diametro de la boca</mat-label>
-        <input matInput placeholder="Diametro" type="number"/>
+        <input matInput formControlName="diametro" placeholder="Diametro" type="number"/>
       </mat-form-field>
 
       <button class="btn" (click)="anyadirFiltro()">Filtrar</button>
     </form>
   </div>
   <div class="row">
-    <app-producto-card id="card" *ngFor="let producto of response" [productocolor]="producto" class="col-4"
+    <app-producto-card id="card" *ngFor="let producto of productocolors" [productocolor]="producto" class="col-4"
     (clickDetalle)="navegarADetalle($event)" [medida]="producto.producto.medidas.length"></app-producto-card>
   </div>
 </div>

@@ -2,6 +2,7 @@ import {Component, OnInit} from '@angular/core';
 import {Medida, Modelo, Productocolor, ProductoResponse, Tipo} from "../../models/ProductoResponse";
 import {ProductoService} from "../../services/producto.service";
 import {Router} from "@angular/router";
+import {FormBuilder, Validators} from "@angular/forms";
 
 @Component({
   selector: 'app-producto',
@@ -12,12 +13,20 @@ export class ProductoComponent implements OnInit{
 
   response: ProductoResponse = [];
   productocolors: Productocolor[] = [];
+  tipoList: string[] = [];
+  modeloList: string[] = [];
 
-  tipoList: Tipo[] = [];
 
-  modeloList: Modelo[] = [];
+  formulario = this.fb.nonNullable.group({
+    diametro: [0],
+    alto: [0],
+    ancho: [0],
+    tipo: ['tipo'],
+    modelo: ['modelo']
+  })
 
-  constructor(private productoService: ProductoService, private router: Router) {
+
+  constructor(private productoService: ProductoService, private router: Router, private fb: FormBuilder) {
   }
 
   ngOnInit(): void {
@@ -30,30 +39,7 @@ export class ProductoComponent implements OnInit{
     this.productoService.getProductos().subscribe({
       next: value => {
         if(value){
-          this.response = value;
-/*
-          let igual = false;
-
-          for(let i = 0; i < this.response.length; i++) {
-
-            if(this.productocolors.length == 0){
-              this.productocolors.push(this.response[i]);
-            }
-
-            for(let j = 0; j < this.productocolors.length; j++){
-
-              if(this.productocolors[j].producto.tipo.descripcion == this.response[i].producto.tipo.descripcion &&
-                this.productocolors[j].producto.modelo.nombre == this.response[i].producto.modelo.nombre){
-                igual = true;
-              }
-            }
-
-            if(igual == false){
-              this.productocolors.push(this.response[i]);
-            }
-
-          }
-*/
+          this.arreglarResponse(value);
         }
       },
       error: err => {
@@ -62,11 +48,31 @@ export class ProductoComponent implements OnInit{
     })
   }
 
+  private arreglarResponse(value: ProductoResponse){
+    this.response = value;
+
+    for(let i = 0; i < this.response.length; i++) {
+
+      if(this.productocolors.length == 0){
+        this.productocolors.push(this.response[i]);
+      }
+
+      if(this.productocolors[this.productocolors.length - 1].producto.id != this.response[i].producto.id){
+        this.productocolors.push(this.response[i]);
+      }
+
+    }
+  }
+
   private traerTipo(){
 
     this.productoService.getTipo().subscribe({
       next: value => {
-        this.tipoList = value;
+
+        for(let i = 0; i < value.length; i++){
+          this.tipoList.push(value[i].descripcion);
+        }
+
       },
       error: err => {
         console.log(err);
@@ -79,7 +85,11 @@ export class ProductoComponent implements OnInit{
 
     this.productoService.getModelo().subscribe({
       next: value => {
-        this.modeloList = value;
+
+        for(let i = 0; i < value.length; i++){
+          this.modeloList.push(value[i].nombre);
+        }
+
       },
       error: err => {console.log(err);}
     })
@@ -93,6 +103,19 @@ export class ProductoComponent implements OnInit{
   }
 
   anyadirFiltro() {
+
+    this.productoService.getProductosFiltro(this.formulario.value.diametro!, this.formulario.value.alto!,this.formulario.value.ancho!,this.formulario.value.tipo!,this.formulario.value.modelo!).subscribe({
+      next: value =>  {
+            if(value){
+              this.productocolors = [];
+              this.arreglarResponse(value);
+
+            }
+      },
+      error: err => {
+        console.log(err);
+      }
+    })
 
   }
 }
