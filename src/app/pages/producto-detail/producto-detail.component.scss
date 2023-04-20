@@ -6,3 +6,13 @@ img{
 #principal{
   background-color: #fbf7f6;
 }
+
+.custom-radio:checked + .form-check-label:before{
+  border-color: #2f2c79;
+  background-color: #2f2c79;
+}
+
+.custom-radio:checked + .form-check-label:after {
+  border-color: white;
+  background-color: #2f2c79;
+}

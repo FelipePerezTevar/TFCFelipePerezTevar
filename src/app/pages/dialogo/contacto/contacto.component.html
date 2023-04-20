@@ -10,7 +10,7 @@
 
       <mat-form-field id="asunto">
         <mat-label>Asunto</mat-label>
-        <input matInput formControlName="email" name="asunto">
+        <input matInput formControlName="asunto" name="asunto">
         <mat-hint>Escriba el asunto del correo</mat-hint>
         <mat-error *ngIf="formulario.get('asunto')?.errors?.['required']">El campo es obligatorio</mat-error>
       </mat-form-field>

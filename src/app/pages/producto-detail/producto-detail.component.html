@@ -15,14 +15,14 @@
     <hr>
     <h2>Medidas</h2>
     <div class="form-check" *ngFor="let medida of medidas; index as i">
-      <input class="form-check-input" type="radio" name="flexRadioMedida" id="flexRadioMedida"
+      <input class="form-check-input custom-radio" type="radio" name="flexRadioMedida" id="flexRadioMedida"
       [(ngModel)]="Imedida" [value]="i" >
       <label class="form-check-label" for="flexRadioMedida">{{medida.alto}}cm X {{medida.ancho}}cm  º{{medida.diametro}}cm</label>
     </div>
     <hr>
     <h2>Colores</h2>
     <div class="row" *ngFor="let color of colores; index as i">
-      <input class="form-check-input" type="radio" name="flexRadioColor" id="flexRadioColor"
+      <input class="form-check-input custom-radio" type="radio" name="flexRadioColor" id="flexRadioColor"
       [(ngModel)]="Icolor" [value]="i">
       <label class="form-check-label" for="flexRadioColor">{{color.nombre}}</label>
     </div>

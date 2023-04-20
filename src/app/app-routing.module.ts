@@ -27,7 +27,7 @@ const routes: Routes = [
     component: QuienesComponent
   },
   {
-    path: 'detalle',
+    path: 'producto/detalle',
     component: ProductoDetailComponent
   },
   {

@@ -1,6 +1,7 @@
-import {Component, OnInit} from '@angular/core';
+import {Component, Input, OnInit} from '@angular/core';
 import {ProductoService} from "../../services/producto.service";
 import {Color, Imagen, Medida, Producto, ProductoResponse} from "../../models/ProductoResponse";
+import {ActivatedRoute} from "@angular/router";
 
 @Component({
   selector: 'app-producto-detail',
@@ -8,6 +9,8 @@ import {Color, Imagen, Medida, Producto, ProductoResponse} from "../../models/Pr
   styleUrls: ['./producto-detail.component.scss']
 })
 export class ProductoDetailComponent implements OnInit{
+
+  product : number |undefined
 
   productoResponse: ProductoResponse = [];
 
@@ -28,16 +31,25 @@ export class ProductoDetailComponent implements OnInit{
   medidas: Medida[] = [];
 
 
-  constructor(private productoService: ProductoService) {
+  constructor(private productoService: ProductoService, private route: ActivatedRoute) {
   }
 
   ngOnInit(): void {
+    this.getIdProducto();
     this.getProducto();
 
   }
 
+  private getIdProducto(){
+    this.route.queryParams.subscribe(
+      params => {
+        this.product = +params['valor'];
+      }
+    )
+  }
+
   private getProducto(){
-    this.productoService.getProductosDetalle().subscribe({
+    this.productoService.getProductosDetalle(this.product!).subscribe({
       next: value => {
         this.productoResponse = value;
         this.arregloProducto();

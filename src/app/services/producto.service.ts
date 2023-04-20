@@ -8,12 +8,7 @@ import {Modelo, ProductoResponse, Tipo} from "../models/ProductoResponse";
 })
 export class ProductoService {
 
-  private _productoId = 0;
 
-  set productoId(value: number){
-    this._productoId = value;
-    sessionStorage.setItem('productoID', ""+this.productoId);
-  }
   constructor(private http: HttpClient) { }
 
   public getProductos(): Observable<ProductoResponse>{
@@ -21,12 +16,7 @@ export class ProductoService {
     return this.http.get<ProductoResponse>(url);
   }
 
-  public getProductosDetalle(): Observable<ProductoResponse>{
-
-    let idproducto = this._productoId;
-    if(this._productoId == 0){
-      idproducto = + sessionStorage.getItem('pelicula')!;
-    }
+  public getProductosDetalle(idproducto: number): Observable<ProductoResponse>{
 
     const url = `http://localhost:8080/productocolor/producto/${idproducto}`
     return this.http.get<ProductoResponse>(url);

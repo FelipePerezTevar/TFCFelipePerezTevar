@@ -1,8 +1,8 @@
 import {Component, OnInit} from '@angular/core';
-import {Medida, Modelo, Productocolor, ProductoResponse, Tipo} from "../../models/ProductoResponse";
+import {Productocolor, ProductoResponse} from "../../models/ProductoResponse";
 import {ProductoService} from "../../services/producto.service";
 import {Router} from "@angular/router";
-import {FormBuilder, Validators} from "@angular/forms";
+import {FormBuilder} from "@angular/forms";
 
 @Component({
   selector: 'app-producto',
@@ -13,8 +13,8 @@ export class ProductoComponent implements OnInit{
 
   response: ProductoResponse = [];
   productocolors: Productocolor[] = [];
-  tipoList: string[] = [];
-  modeloList: string[] = [];
+  tipoList: string[] = ["sin filtro"];
+  modeloList: string[] = ["sin filtro"];
 
 
   formulario = this.fb.nonNullable.group({
@@ -98,23 +98,42 @@ export class ProductoComponent implements OnInit{
 
 
   navegarADetalle($event: number){
-    this.productoService.productoId = $event;
-    this.router.navigate(['detalle']);
+    this.router.navigate(['producto/detalle'], {queryParams: {valor: $event}});
   }
 
   anyadirFiltro() {
 
     this.productoService.getProductosFiltro(this.formulario.value.diametro!, this.formulario.value.alto!,this.formulario.value.ancho!,this.formulario.value.tipo!,this.formulario.value.modelo!).subscribe({
       next: value =>  {
-            if(value){
+            if(value) {
               this.productocolors = [];
-              this.arreglarResponse(value);
 
+              if (this.formulario.value.tipo == "sin filtro") {
+                this.formulario.value.tipo = "tipo"
+              }
+
+              if (this.formulario.value.modelo == "sin filtro") {
+                this.formulario.value.modelo = "modelo";
+              }
+
+              this.arreglarResponse(value);
             }
       },
       error: err => {
         console.log(err);
       }
+    })
+
+  }
+
+  borrarFiltro() {
+
+    this.formulario.setValue({
+      tipo: "tipo",
+      modelo: "modelo",
+      diametro: 0,
+      alto: 0,
+      ancho: 0
     })
 
   }

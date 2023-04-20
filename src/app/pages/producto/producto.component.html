@@ -31,7 +31,8 @@
         <input matInput formControlName="diametro" placeholder="Diametro" type="number"/>
       </mat-form-field>
 
-      <button class="btn" (click)="anyadirFiltro()">Filtrar</button>
+      <button class="btn" id="filtrar" (click)="anyadirFiltro()">Filtrar</button>
+      <button class="btn" id="borrar" (click)="borrarFiltro()">Borrar filtro</button>
     </form>
   </div>
   <div class="row">
