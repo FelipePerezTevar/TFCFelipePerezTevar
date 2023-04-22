@@ -39,6 +39,7 @@ export class ProductoComponent implements OnInit{
     this.productoService.getProductos().subscribe({
       next: value => {
         if(value){
+          this.productocolors = [];
           this.arreglarResponse(value);
         }
       },
@@ -103,26 +104,47 @@ export class ProductoComponent implements OnInit{
 
   anyadirFiltro() {
 
-    this.productoService.getProductosFiltro(this.formulario.value.diametro!, this.formulario.value.alto!,this.formulario.value.ancho!,this.formulario.value.tipo!,this.formulario.value.modelo!).subscribe({
-      next: value =>  {
-            if(value) {
-              this.productocolors = [];
+    if (this.formulario.value.tipo == "sin filtro") {
+      this.formulario.value.tipo = "tipo"
+    }
 
-              if (this.formulario.value.tipo == "sin filtro") {
-                this.formulario.value.tipo = "tipo"
-              }
+    if (this.formulario.value.modelo == "sin filtro") {
+      this.formulario.value.modelo = "modelo";
+    }
 
-              if (this.formulario.value.modelo == "sin filtro") {
-                this.formulario.value.modelo = "modelo";
-              }
+    if(this.formulario.value.diametro! < 0){
+      this.formulario.value.diametro = 0;
+    }
 
-              this.arreglarResponse(value);
-            }
-      },
-      error: err => {
-        console.log(err);
-      }
-    })
+    if(this.formulario.value.alto! < 0){
+      this.formulario.value.alto = 0;
+    }
+
+    if(this.formulario.value.ancho! < 0){
+      this.formulario.value.ancho = 0;
+    }
+
+    if(this.formulario.value.diametro == 0 && this.formulario.value.alto == 0 && this.formulario.value.ancho == 0 &&
+    this.formulario.value.tipo == 'tipo' && this.formulario.value.modelo == 'modelo'){
+
+      this.traerProductos();
+
+    }else{
+
+      this.productoService.getProductosFiltro(this.formulario.value.diametro!, this.formulario.value.alto!,this.formulario.value.ancho!,this.formulario.value.tipo!,this.formulario.value.modelo!).subscribe({
+        next: value =>  {
+          if(value) {
+            this.productocolors = [];
+
+            this.arreglarResponse(value);
+          }
+        },
+        error: err => {
+          console.log(err);
+        }
+      })
+
+    }
 
   }
 
@@ -135,6 +157,8 @@ export class ProductoComponent implements OnInit{
       alto: 0,
       ancho: 0
     })
+
+    this.traerProductos();
 
   }
 }

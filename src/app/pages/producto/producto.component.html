@@ -35,8 +35,12 @@
       <button class="btn" id="borrar" (click)="borrarFiltro()">Borrar filtro</button>
     </form>
   </div>
-  <div class="row">
+  <div class="row" *ngIf="productocolors">
     <app-producto-card id="card" *ngFor="let producto of productocolors" [productocolor]="producto" class="col-4"
     (clickDetalle)="navegarADetalle($event)" [medida]="producto.producto.medidas.length"></app-producto-card>
+  </div>
+  <div id="noMacetas" class="row" *ngIf="!productocolors || productocolors.length === 0">
+    <p id="mensajeError">No se ha encontrado ningun producto</p>
+    <img id="doli" src="assets/imagenes/doli-cabeza.png" alt="doli no macetas"/>
   </div>
 </div>
