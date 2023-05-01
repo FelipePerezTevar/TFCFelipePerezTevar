@@ -25,6 +25,7 @@ export class ProductoService {
   public getProductosFiltro(diametro: number, alto:number, ancho:number, tipo: string, modelo: string): Observable<ProductoResponse>{
 
     const url = `http://localhost:8080/productocolor/filtro?diametro=${diametro}&alto=${alto}&ancho=${ancho}&tipo=${tipo}&modelo=${modelo}`
+
     return this.http.get<ProductoResponse>(url);
   }
 
