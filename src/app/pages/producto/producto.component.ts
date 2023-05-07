@@ -16,6 +16,8 @@ export class ProductoComponent implements OnInit{
   tipoList: string[] = ["sin filtro"];
   modeloList: string[] = ["sin filtro"];
 
+  page: number = 1;
+
 
   formulario = this.fb.nonNullable.group({
     diametro: [0],

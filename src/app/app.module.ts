@@ -20,6 +20,7 @@ import {CarouselModule} from "ngx-owl-carousel-o";
 import { ProductoCardComponent } from './pages/subcomponents/producto-card/producto-card.component';
 import {HttpClientModule} from "@angular/common/http";
 import {MatSelectModule} from "@angular/material/select";
+import {NgxPaginationModule} from "ngx-pagination";
 
 
 @NgModule({
@@ -46,7 +47,8 @@ import {MatSelectModule} from "@angular/material/select";
         CarouselModule,
         HttpClientModule,
         FormsModule,
-        MatSelectModule
+        MatSelectModule,
+      NgxPaginationModule
     ],
   providers: [],
   bootstrap: [AppComponent]
