@@ -22,7 +22,7 @@
       </mat-form-field>
 
       <mat-form-field class="col" id="anchura">
-        <mat-label>Anchura</mat-label>
+        <mat-label>Anchura/Diametro</mat-label>
         <input matInput formControlName="ancho" placeholder="Anchura" type="number"/>
       </mat-form-field>
 
@@ -36,7 +36,7 @@
     </form>
   </div>
   <div class="row" *ngIf="productocolors">
-    <app-producto-card id="card" *ngFor="let producto of productocolors | paginate: {itemsPerPage: 5, currentPage: page}" [productocolor]="producto" class="col-4"
+    <app-producto-card id="card" *ngFor="let producto of productocolors | paginate: {itemsPerPage: 8, currentPage: page}" [productocolor]="producto" class="col-4"
     (clickDetalle)="navegarADetalle($event)" [medida]="producto.producto.medidas.length"></app-producto-card>
     <pagination-controls (pageChange)="page = $event" previousLabel="Anterior" nextLabel="Siguiente"></pagination-controls>
   </div>
