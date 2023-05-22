@@ -1,7 +1,7 @@
 import {Component, OnInit} from '@angular/core';
 import {ProductoService} from "../../services/producto.service";
 import {Color, Medida, ProductoResponse} from "../../models/ProductoResponse";
-import {ActivatedRoute} from "@angular/router";
+import {ActivatedRoute, Router} from "@angular/router";
 
 @Component({
   selector: 'app-producto-detail',
@@ -31,7 +31,7 @@ export class ProductoDetailComponent implements OnInit{
   medidas: Medida[] = [];
 
 
-  constructor(private productoService: ProductoService, private route: ActivatedRoute) {
+  constructor(private productoService: ProductoService, private route: ActivatedRoute, private routeError: Router) {
   }
 
   ngOnInit(): void {
@@ -51,8 +51,13 @@ export class ProductoDetailComponent implements OnInit{
   private getProducto(){
     this.productoService.getProductosDetalle(this.product!).subscribe({
       next: value => {
-        this.productoResponse = value;
-        this.arregloProducto();
+        if(value && value.length > 0){
+          this.productoResponse = value;
+          this.arregloProducto();
+        }else{
+          this.routeError.navigate(['**']);
+        }
+
 
       },
       error: err => {

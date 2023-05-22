@@ -22,27 +22,41 @@ export class QuienesComponent {
     }
   }
 
-  slidesStore = [{
+  slidesStoreFabricacion = [{
     id: 1,
-    src: "../../../assets/imagenes/maceta1New.png",
-    alt: "Maceta1"
+    src: "../../../assets/imagenes/carousel-fabricacion/llenado.jpg",
+    alt: "Fabricacion1"
   },{
     id: 2,
-    src: "../../../assets/imagenes/maceta2New.png",
-    alt: "Maceta2"
+    src: "../../../assets/imagenes/carousel-fabricacion/repasado.jpg",
+    alt: "Fabricacion2"
   },{
     id: 3,
-    src: "../../../assets/imagenes/maceta3New.png",
-    alt: "Maceta3"
+    src: "../../../assets/imagenes/carousel-fabricacion/barnizado.jpg",
+    alt: "Fabricacion3"
+  },]
+
+  slidesStoreHistoria = [{
+    id: 1,
+    src: "../../../assets/imagenes/carousel-historia/horno-antiguo.jpg",
+    alt: "Historia1"
+  },{
+    id: 2,
+    src: "../../../assets/imagenes/carousel-historia/torno-antiguo.jpg",
+    alt: "Historia2"
+  },{
+    id: 3,
+    src: "../../../assets/imagenes/carousel-historia/instalaciones.jpg",
+    alt: "Historia3"
   },]
 
   ngAfterViewInit(): void{
-    const map = new Map('map').setView([39.48951, -0.45171],13);
+    const map = new Map('map').setView([39.48969, -0.46404],13);
     tileLayer('https://tile.openstreetmap.org/{z}/{x}/{y}.png', {
       maxZoom: 19,
       attribution: '&copy; <a href="https://www.openstreetmap.org/copyright">OpenStreetMap</a> contributors'
     }).addTo(map);
-    const markerItem = marker([39.48951, -0.45171]).addTo(map).bindPopup("Cerámicas Doli");
+    const markerItem = marker([39.48969, -0.46404]).addTo(map).bindPopup("Cerámicas Doli");
     map.fitBounds([
       [markerItem.getLatLng().lat,markerItem.getLatLng().lng]
     ]);

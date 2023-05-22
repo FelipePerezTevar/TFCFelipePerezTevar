@@ -22,18 +22,32 @@ export class InicioComponent {
     }
   }
 
-  slidesStore = [{
+  slidesStoreProductos = [{
     id: 1,
-    src: "../../../assets/imagenes/maceta1New.png",
-    alt: "Maceta1"
+    src: "../../../assets/imagenes/carousel-productos/colage1.jpg",
+    alt: "Producto1"
   },{
     id: 2,
-    src: "../../../assets/imagenes/maceta2New.png",
-    alt: "Maceta2"
+    src: "../../../assets/imagenes/carousel-productos/colage2.jpg",
+    alt: "Producto2"
   },{
     id: 3,
-    src: "../../../assets/imagenes/maceta3New.png",
-    alt: "Maceta3"
+    src: "../../../assets/imagenes/carousel-productos/colage3.jpg",
+    alt: "Producto3"
+  },]
+
+  slidesStoreQuienes = [{
+    id: 1,
+    src: "../../../assets/imagenes/carousel-quienes/fachada.jpg",
+    alt: "Quienes1"
+  },{
+    id: 2,
+    src: "../../../assets/imagenes/carousel-quienes/horno.jpg",
+    alt: "Quienes2"
+  },{
+    id: 3,
+    src: "../../../assets/imagenes/carousel-quienes/almacen.jpg",
+    alt: "Quienes3"
   },]
 
   constructor(private router: Router) {

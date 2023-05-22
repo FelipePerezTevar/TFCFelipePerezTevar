@@ -1,46 +1,18 @@
 <div>
   <h1>Cerámicas Doli</h1>
-  <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit.
-    Nulla a purus nec nisl imperdiet pulvinar.
-    Donec lectus turpis, malesuada sed congue vel, egestas quis massa.
-    Aenean eget sollicitudin velit. Curabitur convallis nisi dolor, sit amet venenatis mauris tristique et.
-    Donec ac lacinia magna. In blandit ipsum ac cursus ultricies.
-    Nunc porta, dolor ullamcorper imperdiet interdum, arcu nunc lobortis tortor, quis pretium est diam quis nulla.
-    In gravida mi sagittis, tempor purus eu, laoreet nisl. Donec dignissim scelerisque risus sed ultricies.
-
-    Aliquam at sagittis ex. Quisque tincidunt justo et eros pretium, non hendrerit felis eleifend.
-    Praesent congue purus diam, et mattis nibh lobortis vitae. Cras gravida feugiat libero, in finibus ante bibendum at.
-    Vestibulum ante ipsum primis in faucibus orci luctus et ultrices posuere cubilia curae;
-    Duis mattis mattis arcu, ut aliquet nibh fringilla quis. Suspendisse hendrerit lorem dui, sit amet sollicitudin lectus sodales ut.
-    Nunc porta aliquam enim vel posuere. Sed pharetra elit maximus lacinia blandit. Maecenas porta vitae nulla at molestie.
-    Nullam dapibus sapien posuere metus tincidunt, eget porttitor massa laoreet. Duis egestas sem eget enim dignissim, at porttitor orci porta.
-    Aliquam ultricies arcu massa, at scelerisque metus tempus a. Nullam mollis turpis nec finibus tempor.</p>
+  <p>En Cerámicas Doli somos una empresa de fabricación de productos cerámicos, orientados principalmente a la jardinería, con el principal atractivo de su compromiso por el medio ambiente. Este es uno de nuestros sellos de identidad, más teniendo en cuenta la importancia de cuidar del medio ambiente.</p>
 </div>
 
 <div>
   <h1>Productos</h1>
   <div class="row">
     <div class="col-6">
-      <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit.
-        Nulla a purus nec nisl imperdiet pulvinar.
-        Donec lectus turpis, malesuada sed congue vel, egestas quis massa.
-        Aenean eget sollicitudin velit. Curabitur convallis nisi dolor, sit amet venenatis mauris tristique et.
-        Donec ac lacinia magna. In blandit ipsum ac cursus ultricies.
-        Nunc porta, dolor ullamcorper imperdiet interdum, arcu nunc lobortis tortor, quis pretium est diam quis nulla.
-        In gravida mi sagittis, tempor purus eu, laoreet nisl. Donec dignissim scelerisque risus sed ultricies.
-
-        Aliquam at sagittis ex. Quisque tincidunt justo et eros pretium, non hendrerit felis eleifend.
-        Praesent congue purus diam, et mattis nibh lobortis vitae. Cras gravida feugiat libero, in finibus ante bibendum at.
-        Vestibulum ante ipsum primis in faucibus orci luctus et ultrices posuere cubilia curae;
-        Duis mattis mattis arcu, ut aliquet nibh fringilla quis. Suspendisse hendrerit lorem dui, sit amet sollicitudin lectus sodales ut.
-        Nunc porta aliquam enim vel posuere. Sed pharetra elit maximus lacinia blandit. Maecenas porta vitae nulla at molestie.
-        Nullam dapibus sapien posuere metus tincidunt, eget porttitor massa laoreet. Duis egestas sem eget enim dignissim, at porttitor orci porta.
-        Aliquam ultricies arcu massa, at scelerisque metus tempus a. Nullam mollis turpis nec finibus tempor.</p>
+      <p>En este apartado, encontrará un catálogo con todas las piezas que Cerámicas Doli ofrece a su clientela. Gran parte de los productos van orientados a la jardinería y a la floristería, pero también contamos con un pequeño apartado de decoración.</p>
       <button class="btn"  (click)="navegar('producto')">Ver más</button>
     </div>
     <div class="col-6">
       <owl-carousel-o [options]="options">
-        <ng-container *ngFor="let slide of slidesStore">
+        <ng-container *ngFor="let slide of slidesStoreProductos">
           <ng-template carouselSlide>
             <img class="slide" [src]="slide.src"  [alt]="slide.alt">
           </ng-template>
@@ -56,27 +28,13 @@
   <h1>Quienes somos</h1>
   <div class="row">
     <div class="col-6">
-      <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit.
-        Nulla a purus nec nisl imperdiet pulvinar.
-        Donec lectus turpis, malesuada sed congue vel, egestas quis massa.
-        Aenean eget sollicitudin velit. Curabitur convallis nisi dolor, sit amet venenatis mauris tristique et.
-        Donec ac lacinia magna. In blandit ipsum ac cursus ultricies.
-        Nunc porta, dolor ullamcorper imperdiet interdum, arcu nunc lobortis tortor, quis pretium est diam quis nulla.
-        In gravida mi sagittis, tempor purus eu, laoreet nisl. Donec dignissim scelerisque risus sed ultricies.
-
-        Aliquam at sagittis ex. Quisque tincidunt justo et eros pretium, non hendrerit felis eleifend.
-        Praesent congue purus diam, et mattis nibh lobortis vitae. Cras gravida feugiat libero, in finibus ante bibendum at.
-        Vestibulum ante ipsum primis in faucibus orci luctus et ultrices posuere cubilia curae;
-        Duis mattis mattis arcu, ut aliquet nibh fringilla quis. Suspendisse hendrerit lorem dui, sit amet sollicitudin lectus sodales ut.
-        Nunc porta aliquam enim vel posuere. Sed pharetra elit maximus lacinia blandit. Maecenas porta vitae nulla at molestie.
-        Nullam dapibus sapien posuere metus tincidunt, eget porttitor massa laoreet. Duis egestas sem eget enim dignissim, at porttitor orci porta.
-        Aliquam ultricies arcu massa, at scelerisque metus tempus a. Nullam mollis turpis nec finibus tempor.</p>
+      <p>Aquí pueden leer diversa información sobre la empresa. Como la historia y trayectoria que ha llevado Cerámicas Doli, donde se encuentra la empresa y cómo poder llegar a ella. Además, de cómo fabricamos nuestras macetas de la forma sostenible y respetuosa con el medio ambiente. Junto a la iniciativa respetuosa con el medio ambiente.</p>
       <button class="btn" (click)="navegar('quienes')">Ver más</button>
     </div>
 
 <div class="col-6">
   <owl-carousel-o [options]="options">
-    <ng-container *ngFor="let slide of slidesStore">
+    <ng-container *ngFor="let slide of slidesStoreQuienes">
       <ng-template carouselSlide>
         <img class="slide" [src]="slide.src"  [alt]="slide.alt">
       </ng-template>
@@ -90,19 +48,7 @@
 
 <div>
   <h1>Contacta con nosotros</h1>
-  <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit.
-    Nulla a purus nec nisl imperdiet pulvinar.
-    Donec lectus turpis, malesuada sed congue vel, egestas quis massa.
-    Aenean eget sollicitudin velit. Curabitur convallis nisi dolor, sit amet venenatis mauris tristique et.
-    Donec ac lacinia magna. In blandit ipsum ac cursus ultricies.
-    Nunc porta, dolor ullamcorper imperdiet interdum, arcu nunc lobortis tortor, quis pretium est diam quis nulla.
-    In gravida mi sagittis, tempor purus eu, laoreet nisl. Donec dignissim scelerisque risus sed ultricies.
-
-    Aliquam at sagittis ex. Quisque tincidunt justo et eros pretium, non hendrerit felis eleifend.
-    Praesent congue purus diam, et mattis nibh lobortis vitae. Cras gravida feugiat libero, in finibus ante bibendum at.
-    Vestibulum ante ipsum primis in faucibus orci luctus et ultrices posuere cubilia curae;
-    Duis mattis mattis arcu, ut aliquet nibh fringilla quis. Suspendisse hendrerit lorem dui, sit amet sollicitudin lectus sodales ut.
-    Nunc porta aliquam enim vel posuere. Sed pharetra elit maximus lacinia blandit. Maecenas porta vitae nulla at molestie.
-    Nullam dapibus sapien posuere metus tincidunt, eget porttitor massa laoreet. Duis egestas sem eget enim dignissim, at porttitor orci porta.
-    Aliquam ultricies arcu massa, at scelerisque metus tempus a. Nullam mollis turpis nec finibus tempor.</p>
+  <p>En este apartado tienen todos los datos necesarios para poder contactar con nosotros y resolver sus dudas e inquietudes sobre la empresa o elaboración misma de los productos.
+    Puede tanto acceder a los botones que se encuentran en la parte de abajo de la página, donde hay un enlace directo a nuestras redes sociales, o tiene la opción de acceder al apartado “Contacto” situado en el menú de la parte superior, para redactar un correo electrónico
+  </p>
 </div>
