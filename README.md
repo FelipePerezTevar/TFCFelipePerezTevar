@@ -5,11 +5,10 @@
 2. [Requisitos de funcionamiento](#funcionamiento)
 
 
-<img src="./src/assets/imagenes/doli-logo.png" alt="doli logo" width="25" height="25">
 
 
 ## Descripción del proyecto <a name="proyecto"></a>
-La empresa Cerámicas Doli a contactado conmigo para realizarle 
+<img src="./src/assets/imagenes/doli-icon.png" alt="doli icon" width="25" height="25">  La empresa Cerámicas Doli a contactado conmigo para realizarle 
 una página web que les ayude a darse a conocer y aumentar sus ventas.
 
 
