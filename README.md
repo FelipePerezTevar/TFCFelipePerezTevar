@@ -7,7 +7,8 @@
 
 
 
-![Doli Icono](./src/assets/imagenes/doli-icon.png) ## Descripción del proyecto <a name="proyecto"></a>
+![Doli Icono](./src/assets/imagenes/doli-icon.png) 
+## Descripción del proyecto <a name="proyecto"></a>
 
 
 La empresa Cerámicas Doli a contactado conmigo para realizarle 
