@@ -45,10 +45,12 @@ una página web que les ayude a darse a conocer y aumentar sus ventas.
   3. Abrir un terminal y situarse en la carpeta donde se encuentra el programa descomprimido.
      
   4. Ejecutar el comando que se encuentra debajo para arrancar la aplicación
+
       > ng serve
 
   ***NOTAS***
 * Si es la primera vez que vas a ejecutar el proyecto utiliza el comando que se encuentra debajo para su correcto funcionamiento
+
   > npm install
 
 
