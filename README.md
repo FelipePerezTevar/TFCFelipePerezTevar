@@ -1,6 +1,6 @@
 # PFC - Cerámicas Doli
 
-<div style="display: flex; flex-direction: row;">
+<div style="display: flex;">
   <div style="flex: 1;">
 
 **Índice** 
