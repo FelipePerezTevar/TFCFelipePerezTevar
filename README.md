@@ -2,12 +2,14 @@
 
 <div style="display: flex; flex-direction: row;">
   <div style="flex: 1;">
-    **Índice**
-    1. [Descripción del proyecto](#descripción)
-    2. [Requisitos de funcionamiento](#requisitos)
-    3. [Despliegue de la aplicación](#despliegue)
-    4. [Tecnologias utilizadas](#tecnologias-utilizadas)
-    5. [Autor](#autor)
+
+**Índice** 
+1. [Descripción del proyecto](#descripción) 
+2. [Requisitos de funcionamiento](#requisitos) 
+3. [Despliegue de la aplicación](#despliegue) 
+4. [Tecnologias utilizadas](#tecnologias-utilizadas) 
+5. [Autor](#autor)
+
   </div>
   <div style="flex: 1;">
     <img src="./src/assets/imagenes/doli-logo.png" alt="Doli Icono" style="width: 100px; height: 200px;">
