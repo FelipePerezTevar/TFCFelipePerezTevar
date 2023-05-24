@@ -1,7 +1,6 @@
 # PFC - Cerámicas Doli
 
-<div style="display: flex;">
-  <div style="flex: 1;">
+<img src="./src/assets/imagenes/doli-logo.png" alt="Doli Icono" style="width: 100px; height: 200px;">
 
 **Índice** 
 1. [Descripción del proyecto](#descripción) 
@@ -16,11 +15,6 @@
 
 Actualmente solo se puede ejecutar el proyecto en local
 
-  </div>
-  <div style="flex: 1;">
-    <img src="./src/assets/imagenes/doli-logo.png" alt="Doli Icono" style="width: 100px; height: 200px;">
-  </div>
-</div>
 
 ## Descripción
 
