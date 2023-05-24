@@ -1,35 +1,42 @@
-# PFC - Felipe Perez Tevar
+# PFC - Cerámicas Doli
 
- **Índice**
-1. [Descripción del proyecto](#descripción-del-proyecto-a-nameproyecto-a)
-2. [Requisitos de funcionamiento](#funcionamiento-a-namefuncionamiento-a)
-3. [Despliegue de la aplicación](#despliegue-a-namedespliegue-a)
-4. [Tecnologias utilizadas](#tecnologias-utilizadas-a-nametecnologias-a)
-5. [Autor](#autor-a-nameautor-a)
+<div style="overflow:auto;">
+  <img src="./src/assets/imagenes/doli-logo.png" alt="Doli logo" style="width: 100px; height: 200px; float: right; margin-left: 20px;">
 
+**Índice**
+1. [Descripción del proyecto](#descripción)
+2. [Requisitos de funcionamiento](#requisitos)
+3. [Despliegue de la aplicación](#despliegue)
+4. [Tecnologias utilizadas](#tecnologias-utilizadas)
+5. [Autor](#autor)
+</div>
 
+<div style="overflow:auto">
 
+## Descripción
 
-![Doli Icono](./src/assets/imagenes/doli-icon.png) 
-## Descripción del proyecto <a name="proyecto"></a>
+<img src="./src/assets/imagenes/doli-icon.png" alt="Doli Icono" style="width: 25px; height: 25px; float: right; margin-left: 20px;">
+
+</div>
+
 
 
 La empresa Cerámicas Doli a contactado conmigo para realizarle 
 una página web que les ayude a darse a conocer y aumentar sus ventas.
 
 
-## Funcionamiento <a name="funcionamiento"></a>
+## Requisitos
 
 Su ordenador necesita funcionar
 
-## Despliegue <a name="despliegue"></a>
+## Despliegue 
 
 Utilizar el comando chachi pistachi
 
-## Tecnologias utilizadas <a name="tecnologias"></a>
+## Tecnologias utilizadas 
 
 Todas las tecnologias que he usado
 
-## Autor <a name="autor"></a>
+## Autor 
 
 Felipe Perez Tevar
