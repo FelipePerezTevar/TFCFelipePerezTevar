@@ -1,7 +1,5 @@
 # PFC - Cerámicas Doli
 
-<img src="./src/assets/imagenes/doli-logo.png" alt="Doli Icono" style="width: 100px; height: 200px;">
-
 **Índice** 
 1. [Descripción del proyecto](#descripción) 
 2. [Requisitos de funcionamiento](#requisitos) 
@@ -77,3 +75,5 @@ Todas las tecnologias que he usado
 ## Autor 
 
 Felipe Perez Tevar
+
+<img src="./src/assets/imagenes/doli-logo.png" alt="Doli Icono" style="width: 100px; height: 200px;">
