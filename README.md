@@ -14,16 +14,7 @@
 
 </div>
 
-<div style="overflow:auto">
-
-
-<img src="./src/assets/imagenes/doli-icon.png" alt="Doli Icono" style="width: 25px; height: 25px; float: right; margin-left: 20px;">
-
 ## Descripción
-
-</div>
-
-
 
 La empresa Cerámicas Doli a contactado conmigo para realizarle 
 una página web que les ayude a darse a conocer y aumentar sus ventas.
