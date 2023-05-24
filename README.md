@@ -18,8 +18,7 @@ Actualmente solo se puede ejecutar el proyecto en local
 
 ## Descripción
 
-La empresa Cerámicas Doli a contactado conmigo para realizarle 
-una página web que les ayude a darse a conocer y aumentar sus ventas.
+Este es el proyecto de final de ciclo de Felipe Perez Tevar que consiste en una página web con la finalidad de dar a conocer y facilitar el contacto cliente-empresa a una empresa ficticia de fabricación de piezas de cerámica llamada Cerámicas Doli.
 
 <br/>
 <br/>
@@ -67,13 +66,18 @@ una página web que les ayude a darse a conocer y aumentar sus ventas.
 
 ## Tecnologias utilizadas 
 
-Todas las tecnologias que he usado
+ + Angular: Base principal del proyecto
+ + Bootstrap, Fontawesome y Angular material: Estilos de la aplicación
+ + Leaflet y Openstreetmap: Mapa interactivo
+ + EmailJS: Envio de correos
+ + ngx-owl-carousel-o: Implementación de carouseles de imágenes
+ + ngx-pagination: Paginación de los productos
 
 <br/>
 <br/>
 
 ## Autor 
 
-Felipe Perez Tevar
+Felipe Pérez Tévar
 
 <img src="./src/assets/imagenes/doli-logo.png" alt="Doli Icono" style="width: 100px; height: 200px;">
