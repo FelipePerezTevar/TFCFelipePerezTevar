@@ -22,13 +22,28 @@ La empresa Cerámicas Doli a contactado conmigo para realizarle
 una página web que les ayude a darse a conocer y aumentar sus ventas.
 
 
+## Despliegue
+
+ *Solo se puede desplegar la aplicación en local*
+
+  1. Descargar el proyecto desde Github y descomprimirlo.
+  2. Configurar la API del proyecto. (*la explicación se encuentra en la documentación de la API*)
+  3. Abrir un terminal y situarse en la carpeta donde se encuentra el programa descomprimido.
+     
+  4. Ejecutar el comando que se encuentra debajo para arrancar la aplicación
+      > ng serve
+
+  ***NOTAS***
+* Si es la primera vez que vas a ejecutar el proyecto utiliza el comando que se encuentra debajo para su correcto funcionamiento
+  > npm install
+
 ## Requisitos
 
-Su ordenador necesita funcionar
+1. Se necesita instalar Node.js y la CLI de Angular
 
-## Despliegue 
+    Node.js
 
-Utilizar el comando chachi pistachi
+    > Ir al siguiente url y seleccionar el sistema operativo que se esté utilizando https://nodejs.org/es/download
 
 ## Tecnologias utilizadas 
 
