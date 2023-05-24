@@ -29,19 +29,25 @@ una página web que les ayude a darse a conocer y aumentar sus ventas.
 
 ## Requisitos
 
-1. Se necesita instalar Node.js y la CLI de Angular
+1. Instalar Node.js y la CLI de Angular.
 
-   Node.js
+   Node.js: Ir al siguiente url y seleccionar el sistema operativo que se esté utilizando.
 
-   > Ir al siguiente url y seleccionar el sistema operativo que se esté utilizando https://nodejs.org/es/download
+   >  https://nodejs.org/es/download
+
+    CLI De angular: Abrir un terminal y ejecutar el siguiente comando.
+
+    > npm install -g @angular/cli
+
+2. Descargar la API del proyecto de la siguiente URL y prepararla como dice su documentación.
+
+    > https://github.com/FelipePerezTevar/spring-boot-TFC-FelipePerezTevar
 
 
 ## Despliegue
 
- *Solo se puede desplegar la aplicación en local*
-
   1. Descargar el proyecto desde Github y descomprimirlo.
-  2. Configurar la API del proyecto. (*la explicación se encuentra en la documentación de la API*)
+  2. Poner en marcha la API del proyecto.
   3. Abrir un terminal y situarse en la carpeta donde se encuentra el programa descomprimido.
      
   4. Ejecutar el comando que se encuentra debajo para arrancar la aplicación
