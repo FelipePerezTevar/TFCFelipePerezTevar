@@ -27,6 +27,9 @@ Actualmente solo se puede ejecutar el proyecto en local
 La empresa Cerámicas Doli a contactado conmigo para realizarle 
 una página web que les ayude a darse a conocer y aumentar sus ventas.
 
+<br/>
+<br/>
+
 ## Requisitos
 
 1. Instalar Node.js y la CLI de Angular.
@@ -39,10 +42,15 @@ una página web que les ayude a darse a conocer y aumentar sus ventas.
 
     > npm install -g @angular/cli
 
+<br/>
+
 2. Descargar la API del proyecto de la siguiente URL y prepararla como dice su documentación.
 
     > https://github.com/FelipePerezTevar/spring-boot-TFC-FelipePerezTevar
 
+
+<br/>
+<br/>
 
 ## Despliegue
 
@@ -60,9 +68,15 @@ una página web que les ayude a darse a conocer y aumentar sus ventas.
   > npm install
 
 
+<br/>
+<br/>
+
 ## Tecnologias utilizadas 
 
 Todas las tecnologias que he usado
+
+<br/>
+<br/>
 
 ## Autor 
 
