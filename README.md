@@ -1,4 +1,4 @@
-# PFC - Cerámicas Doli
+# PFC - Cerámicas Doli - Felipe Perez Tevar
 
 **Índice** 
 1. [Descripción del proyecto](#descripción) 
@@ -11,7 +11,7 @@
 
 ***NOTAS***
 
-Actualmente solo se puede ejecutar el proyecto en local
+Actualmente solo se puede ejecutar el proyecto en local.
 
 <br/>
 <br/>
@@ -51,12 +51,12 @@ Este es el proyecto de final de ciclo de Felipe Perez Tevar que consiste en una 
   2. Poner en marcha la API del proyecto.
   3. Abrir un terminal y situarse en la carpeta donde se encuentra el programa descomprimido.
      
-  4. Ejecutar el comando que se encuentra debajo para arrancar la aplicación
+  4. Ejecutar el comando que se encuentra debajo para arrancar la aplicación.
 
       > ng serve
 
   ***NOTAS***
-* Si es la primera vez que vas a ejecutar el proyecto utiliza el comando que se encuentra debajo para su correcto funcionamiento
+* Si es la primera vez que vas a ejecutar el proyecto utiliza el comando que se encuentra debajo para su correcto funcionamiento.
 
   > npm install
 
