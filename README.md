@@ -66,12 +66,12 @@ Este es el proyecto de final de ciclo de Felipe Perez Tevar que consiste en una 
 
 ## Tecnologias utilizadas 
 
- + Angular: Base principal del proyecto
- + Bootstrap, Fontawesome y Angular material: Estilos de la aplicación
- + Leaflet y Openstreetmap: Mapa interactivo
- + EmailJS: Envio de correos
- + ngx-owl-carousel-o: Implementación de carouseles de imágenes
- + ngx-pagination: Paginación de los productos
+ + **Angular**: Base principal del proyecto
+ + **Bootstrap**, **Fontawesome** y **Angular material**: Estilos de la aplicación
+ + **Leaflet** y **Openstreetmap**: Mapa interactivo
+ + **EmailJS**: Envio de correos
+ + **ngx-owl-carousel-o**: Implementación de carouseles de imágenes
+ + **ngx-pagination**: Paginación de los productos
 
 <br/>
 <br/>
